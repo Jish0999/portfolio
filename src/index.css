@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+.font-script {
+  font-family: 'Alex Brush', cursive;
+}
+
+.font-display {
+  font-family: 'Cinzel', serif;
+}
+
+.font-editorial {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-hero-name {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-sans-modern {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* 3D Gold Text Effect */
+.gold-3d-text {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F5D77F 25%, #E5A93C 55%, #8B5300 85%, #FFDF88 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 10px 25px rgba(217, 119, 6, 0.45)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.7));
+  text-shadow: 
+    0 1px 0 #c47d15,
+    0 2px 0 #a2650c,
+    0 3px 0 #7e4d05,
+    0 4px 1px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(245, 158, 11, 0.5);
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 50%, #B45309 100%);
+}
+
+.gold-glow {
+  box-shadow: 0 0 50px -10px rgba(245, 158, 11, 0.4);
+}
+
+.gold-glow-intense {
+  box-shadow: 0 0 60px 10px rgba(245, 158, 11, 0.5), inset 0 0 25px rgba(254, 240, 138, 0.4);
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.perspective-2000 {
+  perspective: 2000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F4F1EA;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4A359;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B88230;
+}

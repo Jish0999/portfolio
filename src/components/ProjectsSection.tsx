@@ -62,8 +62,8 @@ export const ProjectsSection: React.FC = () => {
       title: 'Coders Arena',
       description: 'A Discord community for developers to learn, collaborate, and grow together.',
       tags: ['Community', 'Discord', 'Growth', 'Content'],
-      githubUrl: 'https://github.com/jishnupremms',
-      liveUrl: 'https://github.com/jishnupremms',
+      githubUrl: 'https://discord.gg/n2dtNdrHGd',
+      liveUrl: 'https://discord.gg/n2dtNdrHGd',
       details: {
         overview:
           'Coders Arena is a developer collective and tech incubator hosted on Discord. Built to bridge the gap between novice programmers and industry practitioners, it hosts regular code challenges, open-source project sprints, peer code reviews, and technical workshops.',
@@ -710,7 +710,7 @@ export const ProjectsSection: React.FC = () => {
                     className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold text-[#1A1612] bg-[#EAE5DA] hover:bg-[#DCD6C9] transition-colors"
                   >
                     <Github className="w-4 h-4" />
-                    <span>GitHub Code</span>
+                    <span>Join Link</span>
                   </a>
                   <a
                     href="mailto:jishnupremms2025@gmail.com?subject=Inquiry regarding project"

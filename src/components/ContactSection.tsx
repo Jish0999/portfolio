@@ -20,24 +20,49 @@ export const ContactSection: React.FC = () => {
     setTimeout(() => setCopiedEmail(false), 2500);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
     if (!formData.name || !formData.email || !formData.message) return;
 
     setIsSubmitting(true);
-    // Simulate swift network submission & save to localStorage for persistence
-    setTimeout(() => {
-      try {
-        const stored = JSON.parse(localStorage.getItem('portfolio_messages') || '[]');
-        stored.push({ ...formData, timestamp: new Date().toISOString() });
-        localStorage.setItem('portfolio_messages', JSON.stringify(stored));
-      } catch (err) {
-        console.error(err);
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: '92cd5e84-80b1-4904-b7f3-4b39464a7699',
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject || 'Portfolio Contact Message',
+          message: formData.message,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitted(true);
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: '',
+        });
+      } else {
+        console.error('Web3Forms error:', result);
+        alert('Unable to send the message. Please try again.');
       }
+    } catch (error) {
+      console.error('Submission error:', error);
+      alert('Something went wrong. Please try again.');
+    } finally {
       setIsSubmitting(false);
-      setSubmitted(true);
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    }, 600);
+    }
   };
 
   return (
@@ -117,7 +142,7 @@ export const ContactSection: React.FC = () => {
                 </div>
                 <div>
                   <span className="text-xs text-[#807264] font-medium block">Location</span>
-                  <span className="text-sm font-bold text-[#181410]">Kerala, India</span>
+                  <span className="text-sm font-bold text-[#181410]">Davangere, Karnataka, India</span>
                 </div>
               </div>
             </div>
@@ -129,7 +154,7 @@ export const ContactSection: React.FC = () => {
               </span>
               <div className="flex items-center gap-3">
                 <a
-                  href="https://github.com/jishnupremms"
+                  href="https://github.com/Jish0999"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2.5 rounded-xl bg-white border border-[#E6E1D5] hover:border-[#D97706] text-xs font-bold text-[#1A1612] flex items-center gap-2 shadow-sm transition-all hover:-translate-y-0.5"
@@ -138,7 +163,7 @@ export const ContactSection: React.FC = () => {
                   <span>GitHub</span>
                 </a>
                 <a
-                  href="https://linkedin.com/in/jishnupremms"
+                  href="https://www.linkedin.com/in/jishnuprem-m-s-15a812385"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2.5 rounded-xl bg-white border border-[#E6E1D5] hover:border-[#D97706] text-xs font-bold text-[#1A1612] flex items-center gap-2 shadow-sm transition-all hover:-translate-y-0.5"

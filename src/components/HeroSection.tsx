@@ -1,8 +1,8 @@
 import React from 'react';
-import { ArrowRight, Sparkles, Code2, Rocket, GraduationCap } from 'lucide-react';
+import { ArrowRight, Code2, Rocket, GraduationCap } from 'lucide-react';
 import { Hero3DText } from './Hero3DText';
 import { ThreeGlowingOrb } from './ThreeGlowingOrb';
-import { PortraitAvatar } from './PortraitAvatar';
+import PortraitAvatar from './PortraitAvatar';
 
 interface HeroSectionProps {
   scrollProgress: number;
@@ -105,7 +105,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             <div className="mt-6 sm:mt-8 space-y-3.5 max-w-xl text-[#3A332C] text-base sm:text-lg leading-relaxed font-normal">
               <p>
                 I'm a CS Engineer, with a strong interest in technology,
-                web development, and entrepreneurship.
+                passionate about web development, technology, and entrepreneurship.
               </p>
               <p>
                 I enjoy turning ideas into practical projects, learning how
@@ -114,9 +114,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               </p>
               <p className="pt-1">
                 <span className="text-[#D97706] font-bold">Currently:</span>{' '}
-                Learning, building, experimenting, and turning ideas into reality.
+                Building web projects, learning, experimenting, and turning
+                ideas into reality.
               </p>
-            </div>
+              </div>
 
             {/* Action Buttons (VIEW PROJECTS → and GET IN TOUCH →) */}
             <div className="mt-8 sm:mt-10 flex flex-wrap items-center gap-4 sm:gap-5">
@@ -139,22 +140,28 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               </button>
             </div>
 
-            {/* Quiet Unboxed Metadata Highlights (Discipline: No pill enclosures) */}
+            {/* Hero Metadata */}
             <div className="mt-10 sm:mt-12 pt-6 border-t border-[#E6E1D5]/80 flex flex-wrap items-center gap-4 sm:gap-6 text-xs sm:text-sm text-[#615448] font-medium">
+
               <div className="flex items-center gap-1.5">
                 <GraduationCap className="w-4 h-4 text-[#D97706]" />
-                <span>B.Tech Computer Science & Engineering</span>
+                <span>CSE @ BIET, Davangere</span>
               </div>
+
               <span className="text-[#B0A79C]" aria-hidden="true">·</span>
+
               <div className="flex items-center gap-1.5">
                 <Code2 className="w-4 h-4 text-[#D97706]" />
-                <span>Full-Stack & Systems Architecture</span>
+                <span>C · Python · Web Development</span>
               </div>
+
               <span className="text-[#B0A79C]" aria-hidden="true">·</span>
+
               <div className="flex items-center gap-1.5">
                 <Rocket className="w-4 h-4 text-[#D97706]" />
-                <span>Startup Innovation & Product Strategy</span>
+                <span>Building with an Entrepreneurial Mindset</span>
               </div>
+
             </div>
           </div>
 

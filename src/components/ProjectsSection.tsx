@@ -24,8 +24,8 @@ export const ProjectsSection: React.FC = () => {
       title: 'Medi Aura',
       description: 'An AI-powered health assistant web application for personalized health guidance.',
       tags: ['HTML', 'CSS', 'JavaScript', 'AI'],
-      githubUrl: 'https://github.com/jishnupremms',
-      liveUrl: 'https://github.com/jishnupremms',
+      githubUrl: 'https://github.com/Jish0999',
+      liveUrl: 'https://github.com/Jish0999',
       details: {
         overview:
           'Medi Aura is an intelligent digital health assistant designed to make preventative healthcare and daily wellness guidance accessible to everyone. Powered by artificial intelligence, it provides empathetic triage conversational interactions, symptom evaluation, and personalized lifestyle recommendations.',

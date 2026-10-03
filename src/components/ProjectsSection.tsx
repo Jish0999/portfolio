@@ -62,7 +62,7 @@ export const ProjectsSection: React.FC = () => {
       title: 'Coders Arena',
       description: 'A Discord community for developers to learn, collaborate, and grow together.',
       tags: ['Community', 'Discord', 'Growth', 'Content'],
-      githubUrl: 'https://discord.gg/n2dtNdrHGd',
+      githubUrl: 'YOUR_GITHUB_REPO',
       liveUrl: 'https://discord.gg/n2dtNdrHGd',
       details: {
         overview:
@@ -704,13 +704,13 @@ export const ProjectsSection: React.FC = () => {
                 {/* Footer Action Links */}
                 <div className="mt-8 pt-6 border-t border-[#E6E1D5] flex items-center justify-end gap-4">
                   <a
-                    href={selectedProject.githubUrl}
+                    href={selectedProject.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold text-[#1A1612] bg-[#EAE5DA] hover:bg-[#DCD6C9] transition-colors"
                   >
                     <Github className="w-4 h-4" />
-                    <span>Join Link</span>
+                    <span>Link</span>
                   </a>
                   <a
                     href="mailto:jishnupremms2025@gmail.com?subject=Inquiry regarding project"
